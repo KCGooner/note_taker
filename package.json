@@ -1,0 +1,23 @@
+{
+  "name": "note_taker",
+  "version": "1.0.0",
+  "description": "Note Taker",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KCGooner/note_taker.git"
+  },
+  "keywords": [
+    "note",
+    "taker"
+  ],
+  "author": "Joe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KCGooner/note_taker/issues"
+  },
+  "homepage": "https://github.com/KCGooner/note_taker#readme"
+}
