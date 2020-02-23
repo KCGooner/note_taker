@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/KCGooner/note_taker/issues"
   },
-  "homepage": "https://github.com/KCGooner/note_taker#readme"
+  "homepage": "https://github.com/KCGooner/note_taker#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
