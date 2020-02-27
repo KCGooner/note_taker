@@ -4,6 +4,8 @@ var $saveNoteBtn = $(".save-note");
 var $newNoteBtn = $(".new-note");
 var $noteList = $(".list-container .list-group");
 
+
+
 // activeNote is used to keep track of the note in the textarea
 var activeNote = {};
 

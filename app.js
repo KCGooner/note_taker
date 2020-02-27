@@ -3,7 +3,9 @@ var path = require("path")
 
 //sets up express app
 var app = express();
-var PORT = 3000;
+
+app.use(express.static('assets'));
+var PORT = process.env.PORT || 3000;
 
 //sets up express app to handle data parsing
 app.use(express.urlencoded({extended: true}));
