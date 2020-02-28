@@ -1,5 +1,6 @@
-var express = require("express")
-var path = require("path")
+var express = require("express");
+var path = require("path");
+var fs = require("fs");
 
 //sets up express app
 var app = express();
@@ -18,6 +19,8 @@ app.get("/", function(req, res) {
 app.get("/notes", function(req, res) {
     res.sendFile(path.join(__dirname, "./notes.html"));
 });
+
+
 
 
 //start server to listen
