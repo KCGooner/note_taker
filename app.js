@@ -9,21 +9,40 @@ app.use(express.static('assets'));
 var PORT = process.env.PORT || 3000;
 
 //sets up express app to handle data parsing
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Routes
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "./index.html"));
 });
-app.get("/notes", function(req, res) {
+app.get("/notes", function (req, res) {
     res.sendFile(path.join(__dirname, "./notes.html"));
 });
 
+app.get("/api/notes", (req, res) => {
 
+    res.sendFile(path.join(__dirname, "/db.json"));
+});
 
+app.post("/api/notes", (req, res) => {
+    
+    const data = req.body;
+    const id = Date.now();
+    const db = fs.readFileSync(path.join(__dirname, "/db.json"), "utf8");
+    
+    const note = {
+        id: id,
+        title: data.title,
+        text: data.text,
+    };
+    const dbfile = JSON.parse(db)
+    dbfile.push(note);
+    fs.writeFileSync(path.join(__dirname, "/db.json"), JSON.stringify(dbfile), "utf8");
+    res.sendFile(path.join(__dirname, "/db.json"));
+});
 
 //start server to listen
-app.listen(PORT, function() {
+app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
 });
