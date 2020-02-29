@@ -52,8 +52,8 @@ app.delete("/api/notes/:id", (req, res) => {
             break;
         }
     }
-
-
+    fs.writeFileSync(path.join(__dirname, "/db.json"), JSON.stringify(dbFile));
+    res.sendFile(path.join(__dirname, "/db.json"));
 });
 
 //start server to listen
