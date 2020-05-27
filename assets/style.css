@@ -30,13 +30,13 @@ html, body {
   }
   
   .note-title {
-    height: 50px;
-    margin-top: 13px;
-    font-size: 3rem;
+    height: 60px;
+    margin-top: 10px;
+    font-size: 3.5rem;
   }
   
   .note-title:read-only, .note-textarea:read-only {
-    color: #757575;
+    color: lightgrey;
   }
   
   .list-container .card {
@@ -66,7 +66,7 @@ html, body {
   .list-container .list-group-item {
     border-left: none;
     border-right: none;
-    padding: 20px;
+    padding: 10px;
     cursor: pointer;
   }
   
