@@ -9,8 +9,8 @@ html, body {
   }
   
   .icons i {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
     font-size: 1.5rem;
     cursor: pointer;
     display: -webkit-inline-box;
@@ -26,7 +26,7 @@ html, body {
   .note-textarea {
     resize: none;
     height: calc(100% - 63px);
-    padding-top: 15px;
+    padding-top: 10px;
   }
   
   .note-title {
